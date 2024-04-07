@@ -20,6 +20,13 @@ function Hamburger() {
           {isOpen ? <span className="text-6xl">×</span> : "☰"}
         </button>
       </div>
+      <div
+        className={`${
+          isOpen
+            ? "left-0 bg-black/50 absolute top-22 w-screen h-screen z-20 "
+            : " left-0"
+        } `}
+      ></div>
 
       <div
         className={`transition-transform duration-700 ${
