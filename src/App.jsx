@@ -11,7 +11,6 @@ import Hamburger from "./Components/hamburger";
 import Footer from "./Components/Footer";
 import Greetings from "./Components/Greetings";
 
-
 function App() {
   return (
     <>

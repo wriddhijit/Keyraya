@@ -25,7 +25,6 @@ function Card(props) {
           <div>
             {/* FromTIme */}
             fromtime
-            
           </div>
           <div className=" p-2 w-8 h-8 flex rounded-full border-2 border-gray-200 shadow-lg bg-white">
             {/* TO */}

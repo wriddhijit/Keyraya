@@ -5,7 +5,7 @@ const AnimatedText = () => {
   const textRef = useRef(null);
 
   useEffect(() => {
-    const words = [ "Rent", "Ride", "Repeat"];
+    const words = ["Rent", "Ride", "Repeat"];
     let part,
       i = 0,
       offset = 0,

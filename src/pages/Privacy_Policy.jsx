@@ -1,11 +1,9 @@
-function Privacypolicy(){
-    return (
-        <>
-            <div>
-                Privacy Policy
-            </div>
-        </>
-    )
+function Privacypolicy() {
+  return (
+    <>
+      <div>Privacy Policy</div>
+    </>
+  );
 }
 
 export default Privacypolicy;

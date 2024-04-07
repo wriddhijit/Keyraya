@@ -1,4 +1,3 @@
-
 import AnimatedText from "../Components/animatedtext";
 
 import Pickupdropoff from "../Components/pickupdropoff";
@@ -7,8 +6,6 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-  
-
       <div className="object-cover relative">
         <img
           className="w-full h-[900px]"
@@ -61,7 +58,6 @@ const Home = () => {
 
       {/* viewport */}
       {/* figma react genrator */}
-      
     </>
   );
 };

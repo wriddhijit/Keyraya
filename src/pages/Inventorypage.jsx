@@ -1,13 +1,10 @@
-
 import Inventory from "../Components/Inventory";
 
 import combinedpickupdropoff from "../Components/combinedpickupdropoff";
 
-
 const Inventorypage = () => {
   return (
     <>
-      
       <div className="">
         <div className="relative ">
           <img
@@ -51,7 +48,6 @@ const Inventorypage = () => {
           </div>
         </div>
       </div>
-      
     </>
   );
 };

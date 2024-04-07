@@ -1,9 +1,6 @@
-
-
 const About_Us = () => {
   return (
     <>
-      
       <div className=" flex flex-col ">
         <div className="relative bg-black ">
           <img
@@ -98,7 +95,6 @@ const About_Us = () => {
           </p>
         </div>
       </div>
-      
     </>
   );
 };
