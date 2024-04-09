@@ -39,23 +39,30 @@ function Hamburger() {
       <div
         className={`transition-transform duration-700 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } absolute z-20 text-xl uppercase font-bold tracking-wider w-[320px] text-black bg-slate-200 h-screen p-[2rem] pt-0 top-22 left-0`}
+        } absolute z-20 text-xl uppercase font-bold tracking-wider w-[320px] text-black bg-slate-200 h-screen pl-5 top-22 left-0`}
       >
-        <div className="pt-16 h-[50px] px-[10px] hover:text-red-700 cursor-pointer hover:opacity-80 hover:scale-105">
+        <div className="flex items-center mt-16 h-[50px] px-[10px] cursor-pointer hover:bg-slate-300   ">
           <Link to="/signuplogin">Log in/Sign UP</Link>
         </div>
-        <div className="pt-16 h-[50px] px-[10px] hover:text-red-700 cursor-pointer hover:opacity-80 hover:scale-105">
-          <Link to="/Inventorypage">Orders</Link>
+        <div className="border-b border-y-zinc-300"></div>
+
+        <div className="flex items-center  h-[50px] px-[10px] cursor-pointer hover:bg-slate-300">
+          <Link to="/Inventorypage">Inventory</Link>
         </div>
-        <div className="pt-16 h-[50px] px-[10px] hover:text-red-700 cursor-pointer hover:opacity-80 hover:scale-105">
-          <Link to="/">Offers</Link>
-        </div>
-        <div className="pt-16 h-[50px] px-[10px] hover:text-red-700 cursor-pointer hover:opacity-80 hover:scale-105">
+        <div className="border-b border-y-zinc-300"></div>
+        <div className="flex items-center  h-[50px] px-[10px]  cursor-pointer hover:bg-slate-300">
           <Link to="/">Blogs</Link>
         </div>
-        <div className="pt-16 h-[50px] px-[10px] hover:text-red-700 cursor-pointer hover:opacity-80 hover:scale-105">
+        <div className="border-b border-y-zinc-300"></div>
+        <div className="flex items-center  h-[50px] px-[10px] cursor-pointer  hover:bg-slate-300">
+          <Link to="/About_Us">About Us</Link>
+        </div>
+
+        <div className="border-b border-y-zinc-300"></div>
+        <div className="flex items-center h-[50px] px-[10px] cursor-pointer  hover:bg-slate-300">
           <Link to="/About_Us">Privacy Policy</Link>
         </div>
+        <div className="border-b border-y-zinc-300"></div>
       </div>
     </>
   );
