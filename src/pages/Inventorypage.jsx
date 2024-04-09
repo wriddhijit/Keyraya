@@ -1,5 +1,4 @@
 import Inventory from "../Components/Inventory";
-
 import combinedpickupdropoff from "../Components/combinedpickupdropoff";
 
 const Inventorypage = () => {

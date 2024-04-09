@@ -10,6 +10,7 @@ import Navbar from "./Components/Navbar";
 import Hamburger from "./Components/hamburger";
 import Footer from "./Components/Footer";
 import Greetings from "./Components/Greetings";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/signuplogin" element={<Signuplogin />} />
           <Route path="/Terms&Conditions" element={<TermsandConditions />} />
           <Route path="/Privacy_Policy" element={<Privacypolicy />} />
+          <Route path="/Checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -1,6 +1,6 @@
-import Dropoff from "./Dropoff";
+import { Link } from "react-router-dom";
 
-function Card(props) {
+function Card() {
   return (
     <>
       <div className="p-3 ">
@@ -38,9 +38,11 @@ function Card(props) {
           <div className="border-l border-gray-300 h-12"></div>
           <div className="">
             {/* button */}
-            <button className="bg-red-700 text-center text-white text-base px-4 py-2 rounded-lg hover:bg-white hover:text-black">
-              Book Now
-            </button>
+            <Link to="/Checkout">
+              <button className="bg-red-700 text-center text-white text-base px-4 py-2 rounded-lg hover:bg-white hover:text-black">
+                Book Now
+              </button>
+            </Link>
           </div>
         </div>
         <div className=" py-1">
