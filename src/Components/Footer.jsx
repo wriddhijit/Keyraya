@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <>
-      <div className="flex justify-around pb-16 border bg-zinc-800 text-white p-5 pt-7">
+      <div className="flex justify-around pb-28 border bg-zinc-800 text-white p-5 pt-7">
         <div className="mt-2">
           <img
             className="w-28 h-20 p-1"
