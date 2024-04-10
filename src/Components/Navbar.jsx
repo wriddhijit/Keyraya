@@ -5,7 +5,7 @@ function Navbar() {
     <>
       {/* navbar starts here */}
 
-      <nav className="w-full h-[84px] flex bg-slate-200 justify-between px-4 shadow-lg md:px-4 ">
+      <nav className="w-full h-[86px] flex bg-slate-200 justify-between px-4 shadow-lg md:px-4 ">
         {/* logo */}
         <img
           className="w-40 p-2 pl-12"
