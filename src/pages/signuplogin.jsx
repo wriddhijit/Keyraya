@@ -12,7 +12,7 @@ function Signuplogin() {
       setSignupIsOpen(!SignupisOpen);
       setLoginIsOpen(false);
     }
-  }; 
+  };
 
   const toggleLogin = () => {
     if (!LoginisOpen) {
@@ -20,7 +20,7 @@ function Signuplogin() {
       setLoginIsOpen(!LoginisOpen);
       setSignupIsOpen(false);
     }
-  };   
+  };
 
   return (
     <>

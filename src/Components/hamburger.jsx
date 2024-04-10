@@ -45,6 +45,10 @@ function Hamburger() {
           <Link to="/signuplogin">Log in/Sign UP</Link>
         </div>
         <div className="border-b border-y-zinc-300"></div>
+        <div className="flex items-center  h-[50px] px-[10px] cursor-pointer hover:bg-slate-300">
+          <Link to="/Account">My Account</Link>
+        </div>
+        <div className="border-b border-y-zinc-300"></div>
 
         <div className="flex items-center  h-[50px] px-[10px] cursor-pointer hover:bg-slate-300">
           <Link to="/Inventorypage">Inventory</Link>
