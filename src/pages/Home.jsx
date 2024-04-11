@@ -38,7 +38,7 @@ const Home = () => {
             </p>
           </p>
 
-          <div className="absolute pt-3">
+          <div className="">
             <Link
               to="/Inventorypage"
               className="inline-block bg-red-800 text-center text-xl px-10 py-3 text-white hover:bg-white hover:text-black"

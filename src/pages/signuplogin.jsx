@@ -24,6 +24,10 @@ function Signuplogin() {
 
   return (
     <>
+      <div className="">
+
+      </div>
+      
       <div className="flex justify-center mt-16 mb-10">
         <div className=" flex flex-col w-[600px] border-2 border-gray-300 shadow-lg px-5 py-3 rounded-xl ">
           <p className="text-center text-5xl font-bold pb-6 pt-5">Keyraya</p>

@@ -17,9 +17,14 @@ function App() {
   return (
     <>
       <BrowserRouter basename="/">
-        <Navbar />
+        <div>
+          <Navbar />
+        </div>
+
         <Hamburger />
+
         <Greetings isLoggedIn={false} username="User" />
+
         <Routes>
           <Route path="/" element={<Home />} />
 

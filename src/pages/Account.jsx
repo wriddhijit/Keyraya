@@ -160,9 +160,9 @@ function Account() {
                   htmlFor="Aadhar"
                   className="cursor-pointer bg-gray-200 rounded-xl w-[600px] h-60 flex items-center justify-center"
                 >
-                  {selectedDP ? (
+                  {selectedAadhar ? (
                     <img
-                      src={URL.createObjectURL(selectedDP)}
+                      src={URL.createObjectURL(selectedAadhar)}
                       alt="Uploaded"
                       className="w-full h-full object-cover rounded-full"
                     />
@@ -199,9 +199,9 @@ function Account() {
                     htmlFor="DL"
                     className="cursor-pointer bg-gray-200 rounded-xl w-[600px] h-60 flex items-center justify-center"
                   >
-                    {selectedDP ? (
+                    {selectedDL ? (
                       <img
-                        src={URL.createObjectURL(selectedDP)}
+                        src={URL.createObjectURL(selectedDL)}
                         alt="Uploaded"
                         className="w-full h-full object-cover rounded-full"
                       />
