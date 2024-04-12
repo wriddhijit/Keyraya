@@ -77,7 +77,7 @@ function Hamburger() {
         </Link>
 
         <div className="border-b border-y-zinc-300"></div>
-        <Link to="/APrivacy_Policy">
+        <Link to="/Privacy_Policy">
           <div className="flex items-center h-[50px] px-[10px] cursor-pointer  hover:bg-slate-300 hover:scale-105">
             Privacy Policy
           </div>
