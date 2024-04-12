@@ -18,7 +18,7 @@ const Inventorypage = () => {
       <div className="border-b border-black m-5 "></div>
 
       <div className="my-4 py-2 pt-0 bg-slate-100">
-        <div className="max-w-full grid grid-cols-[500px,1fr] ">
+        <div className="max-w-full grid grid-cols-[500px,1fr]">
           {/* main */}
           <div className="">
             <p>filter</p>

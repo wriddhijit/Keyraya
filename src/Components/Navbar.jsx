@@ -9,7 +9,7 @@ function Navbar() {
         {/* logo */}
         <img
           className="w-40 p-2 pl-12"
-          src="src/assets/Logo&Typography_LightBG.png"
+          src="src/assets/logo/Logo&Typography_LightBG.png"
         ></img>
 
         
