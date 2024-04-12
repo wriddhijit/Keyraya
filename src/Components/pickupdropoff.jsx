@@ -1,5 +1,6 @@
 import Dropoff from "./Dropoff";
 import Pickup from "./pickup";
+import { Link } from "react-router-dom";
 
 function Pickupdropoff() {
   return (
@@ -23,13 +24,15 @@ function Pickupdropoff() {
             {/* drop date and time */}
           </div>
           <div className="">
-            {/* search button */}
-            <button
-              type="button"
-              className=" w-36 bg-red-600 text-center text-white text-2xl px-4 py-2 hover:bg-red-800 tracking-wider"
-            >
-              Search
-            </button>
+            <Link to="/Inventorypage">
+              {/* search button */}
+              <button
+                type="button"
+                className=" w-36 bg-red-600 text-center text-white text-2xl px-4 py-2 hover:bg-red-800 tracking-wider"
+              >
+                Search
+              </button>
+            </Link>
           </div>
         </div>
       </div>

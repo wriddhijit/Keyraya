@@ -51,7 +51,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="absolute right-96 top-72  ">
+      <div className="absolute right-96 top-60  ">
         <Pickupdropoff />
         {/* login box */}
       </div>

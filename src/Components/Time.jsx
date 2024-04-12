@@ -1,10 +1,14 @@
 import { useState } from "react";
 
-const TimePicker = () => {
+const TimePicker = ({ onChange }) => {
   const [selectedTime, setSelectedTime] = useState("");
 
   const handleTimeChange = (event) => {
-    setSelectedTime(event.target.value);
+    const time = event.target.value;
+    setSelectedTime(time);
+    if (onChange) {
+      onChange(time); // Pass the selected time to the onChange function
+    }
   };
 
   return (
