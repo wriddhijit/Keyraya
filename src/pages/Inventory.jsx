@@ -1,7 +1,7 @@
-import Inventory from "../Components/Inventory";
+import InventorySection from "../Components/InventorySection";
 import combinedpickupdropoff from "../Components/combinedpickupdropoff";
 
-const Inventorypage = () => {
+const Inventory = () => {
   return (
     <>
       <div className="">
@@ -42,7 +42,7 @@ const Inventorypage = () => {
             </div> */}
             <div>
               {/* inventory */}
-              <Inventory />
+              <InventorySection />
             </div>
           </div>
         </div>
@@ -51,4 +51,4 @@ const Inventorypage = () => {
   );
 };
 
-export default Inventorypage;
+export default Inventory;

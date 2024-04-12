@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-function Inventory() {
+function InventorySection() {
   return (
     <>
       <div className="my-5 ">
@@ -32,4 +32,4 @@ function Inventory() {
   );
 }
 
-export default Inventory;
+export default InventorySection;

@@ -2,7 +2,6 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import About_Us from "./pages/About_Us";
 import Contact_Us from "./pages/Contact_Us";
-import Inventorypage from "./pages/Inventorypage";
 import Signuplogin from "./pages/signuplogin";
 import TermsandConditions from "./pages/Terms&Conditions";
 import Privacypolicy from "./pages/Privacy_Policy";
@@ -12,6 +11,7 @@ import Footer from "./Components/Footer";
 import Greetings from "./Components/Greetings";
 import Checkout from "./pages/Checkout";
 import Account from "./pages/Account";
+import Inventory from "./pages/Inventory";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
 
-          <Route path="/Inventorypage" element={<Inventorypage />} />
+          <Route path="/Inventory" element={<Inventory />} />
           <Route path="/About_Us" element={<About_Us />} />
           <Route path="/Contact_Us" element={<Contact_Us />} />
           <Route path="/signuplogin" element={<Signuplogin />} />
