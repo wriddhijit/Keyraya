@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 function Greetings(props) {
   const welcomeMessage = (
-    <div className="flex justify-center items-center bg-slate-500 h-12  ">
-      <p className=" text-2xl text-white tracking-wider">
+    <div className="flex justify-center items-center bg-slate-500 h-12">
+      <p className=" text-2xl text-white tracking-widest">
         Welcome {props.username}
       </p>
     </div>
@@ -12,7 +12,7 @@ function Greetings(props) {
 
   const loginPrompt = (
     <div className="flex justify-center items-center bg-slate-800 h-12  ">
-      <p className="text-2xl text-white tracking-wider">
+      <p className="text-2xl text-white tracking-widest">
         Please
         <Link to="/signuplogin">
           <span className=" text-blue-500 underline"> Log in </span>

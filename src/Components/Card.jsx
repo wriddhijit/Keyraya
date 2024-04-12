@@ -16,10 +16,10 @@ function Card() {
           ></img>
         </div>
 
-        <div>
+        {/* <div>
           <p className="text-center text-xs">Available at</p>
         </div>
-        <div></div>
+        <div></div> */}
         <div className="flex items-center justify-around py-4">
           {/*time */}
           <div>
@@ -33,7 +33,7 @@ function Card() {
           <div>{/* ToTIme */} To time</div>
         </div>
         <div className="border-b border-gray-400"></div>
-        <div className="flex items-center justify-around py-2">
+        <div className="flex items-center justify-around py-4">
           <div className="px-8 ">{/* price */}Price</div>
           <div className="border-l border-gray-300 h-12"></div>
           <div className="">
@@ -45,10 +45,10 @@ function Card() {
             </Link>
           </div>
         </div>
-        <div className=" py-1">
+        {/* <div className=" py-1">
           <p className=" text-center text-xs">Excess km charges: ₹/km</p>
           <p className=" text-center text-xs">Refundable security deposit: ₹</p>
-        </div>
+        </div> */}
       </div>
     </>
   );

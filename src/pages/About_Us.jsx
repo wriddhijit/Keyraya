@@ -4,94 +4,57 @@ const About_Us = () => {
       <div className=" flex flex-col ">
         <div className="relative bg-black ">
           <img
-            className=" h-[500px] w-[1850px] opacity-40"
+            className=" h-[350px] w-[1850px] opacity-30"
             src="src/assets/aboutus.jpg"
           ></img>
-          <div className=" absolute bottom-16 left-0 right-0  text-white text-center p-2 ">
+          <div className=" absolute top-16 left-0 right-0  text-white text-center p-2 ">
             <div className="flex items-center justify-center ">
               <div className=" border-4 border-t border-white w-36 rounded-2xl"></div>
               <div className="mx-4 ">
-                <p className="font-bold text-6xl">We are KEYRAYA</p>
+                <p className="font-bold text-6xl">About us</p>{" "}
               </div>
               <div className=" border-4 border-t border-white w-36 rounded-2xl"></div>
             </div>
+            <p className=" mt-10 text-2xl text-center leading-relaxed tracking-wide font-semibold">
+              At Keyraya, we believe in "Cruise without commitment: Ride when
+              you want, return when you're done."
+            </p>
           </div>
         </div>
 
         <div className="px-12">
-          <p className="mt-8 mb-4 text-2xl font-semibold leading-tight ">
-            The roar of an engine, the breeze on your head, the earth lying out
-            ahead of you – that pretty much sums up what motorcycling is all
-            about. We are more than just a rental company; we are your ticket to
-            unforgettable journeys. Let us satisfy your craving for travel with
-            a well-cared-for motorcycle and a promise of endless possibilities
+          <p className=" px-24 mt-8 mb-8 text-2xl text-center font-normal leading-relaxed tracking-wide ">
+            Keyraya embodies a vibrant team driven by a unified purpose: to
+            revolutionize mobility solutions in India.
+            <br></br>Our relentless focus has propelled us to create a
+            cutting-edge platform offering <br></br>rentals across Bengaluru
+            recognizing the vast potential in the largely unexplored and
+            disorganized transportation sector,<br></br> we are driven to
+            establish a trusted system that transcends barriers for all.
           </p>
-          <p>
-            <ul className=" list-disc text-lg font-semibold">
-              <li className="py-2">
-                Our knowledgeable team is dedicated to making your rental
-                experience smooth and enjoyable. From choosing the right bike to
-                planning your route, we're here to help you make unforgettable
-                memories.
-              </li>
-              <li className="py-2">
-                Browse our diverse selection of motorcycles, from classic
-                cruisers and nimble sportbikes to comfortable touring machines
-                and off-road adventure bikes. We have something for every rider
-                and every ride.
-              </li>
-              <li className="py-2">
-                Your safety is our priority. All our motorcycles are rigorously
-                maintained to the highest standards and come equipped with
-                essential safety gear. Ride with confidence, knowing we've got
-                your back.
-              </li>
-              <li className="py-2">
-                We're not just about renting motorcycles; we're about fostering
-                a community of passionate riders. Connect with like-minded
-                adventurers, discover new routes, and share your love for the
-                open road.
-              </li>
-            </ul>
+          <p className="text-xl px-10 font-normal text-center leading-relaxed tracking-wide">
+            At Keyraya, we pride ourselves on our unrestricted approach to
+            two-wheelers, catering to every need from everyday scooters to
+            exhilarating superbikes.<br></br> Our services are easily accessible
+            through both our website and mobile application, ensuring seamless
+            rental experiences for our customers.
           </p>
-          <p className="mt-6 mb-6 font-semibold text-3xl">
-            The rumble of an engine, the wind in your hair, the world unfurling
-            before you – that's the essence of motorcycling. We're more than
-            just a rental company; we're your gateway to unforgettable
-            adventures. Let us fuel your wanderlust with a meticulously
-            maintained motorcycle and the promise of endless possibilities.
-            Browse our diverse selection of motorcycles, from classic cruisers
-            and nimble sportbikes to comfortable touring machines and off-road
-            adventure bikes. We have something for every rider and every ride.
+          <p className="mt-10 mb-6 font-normal text-xl text-center  tracking-wide">
+            Central to our ethos is the belief in the power of renting over
+            buying. We believe in the idea of
+            <br></br>
+            <span className="font-bold">
+              {" "}
+              "Cruise without commitment: Ride when you want, return when you're
+              done."{" "}
+            </span>{" "}
+            <br></br>
+            offering unparalleled convenience and flexibility to our users.
           </p>
-          <p>
-            <ul className=" list-disc text-lg font-semibold">
-              <li className="py-2">
-                We are here to help you create never-to-be-forgotten
-                experiences.
-              </li>
-
-              <li className="py-2">
-                Our selection is extensive and includes various kinds of
-                motorcycles such as traditional motorbikes, sporty bikes that
-                can make sharp turns easily, comfortable bikes for long distance
-                traveling and off-road bikes. We have all types of motorcycles
-                for different riders and rides.
-              </li>
-
-              <li className="py-2">
-                Your safety is very important to us. All our motorbikes are
-                maintained strictly in compliance with the highest standards and
-                are equipped with mandatory protective equipment. You’ll be
-                secure knowing we’re always behind your back.
-              </li>
-
-              <li className="py-2">
-                Motorcycles rent gets us going on a passion trail; it brings
-                like-minded adventure seekers together where they can establish
-                new paths and talk about their love for the open road.
-              </li>
-            </ul>
+          <p className="mt-6 mb-14 text-center text-2xl font-medium tracking-wide">
+            Join us on our journey as we redefine mobility solutions and pave
+            the way for a future where renting is not just a choice but a
+            lifestyle.
           </p>
         </div>
       </div>
