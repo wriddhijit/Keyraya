@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 
-export const Click = (ref, handler) => { 
-
-  useEffect(() => {    
+export const Click = (ref, handler) => {
+  useEffect(() => {
     const listener = (event) => {
       if (!ref.current || ref.current.contains(event.target)) {
         return;

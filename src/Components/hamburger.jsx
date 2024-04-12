@@ -47,38 +47,38 @@ function Hamburger() {
         } absolute z-20 text-xl uppercase font-semibold tracking-wider w-[320px] text-black bg-slate-200 h-screen pl-3 top-22 left-0`}
       >
         <Link to="/signuplogin">
-          <div className="flex items-center mt-16 h-[50px] px-[10px] cursor-pointer hover:bg-slate-300   ">
+          <div className="flex items-center mt-16 h-[50px] px-[10px] cursor-pointer hover:bg-slate-300 hover:scale-105   ">
             Log in/Sign UP
           </div>
         </Link>
         <div className="border-b border-y-zinc-300"></div>
         <Link to="/Account">
-          <div className="flex items-center  h-[50px] px-[10px] cursor-pointer hover:bg-slate-300">
+          <div className="flex items-center  h-[50px] px-[10px] cursor-pointer hover:bg-slate-300 hover:scale-105">
             My Account
           </div>
         </Link>
         <div className="border-b border-y-zinc-300"></div>
         <Link to="/Inventorypage">
-          <div className="flex items-center  h-[50px] px-[10px] cursor-pointer hover:bg-slate-300">
+          <div className="flex items-center  h-[50px] px-[10px] cursor-pointer hover:bg-slate-300 hover:scale-105">
             Inventory
           </div>
         </Link>
         <div className="border-b border-y-zinc-300"></div>
         <Link to="/">
-          <div className="flex items-center  h-[50px] px-[10px]  cursor-pointer hover:bg-slate-300">
+          <div className="flex items-center  h-[50px] px-[10px]  cursor-pointer hover:bg-slate-300 hover:scale-105">
             Blogs
           </div>
         </Link>
         <div className="border-b border-y-zinc-300"></div>
         <Link to="/About_Us">
-          <div className="flex items-center  h-[50px] px-[10px] cursor-pointer  hover:bg-slate-300">
+          <div className="flex items-center  h-[50px] px-[10px] cursor-pointer  hover:bg-slate-300 hover:scale-105">
             About Us
           </div>
         </Link>
 
         <div className="border-b border-y-zinc-300"></div>
         <Link to="/APrivacy_Policy">
-          <div className="flex items-center h-[50px] px-[10px] cursor-pointer  hover:bg-slate-300">
+          <div className="flex items-center h-[50px] px-[10px] cursor-pointer  hover:bg-slate-300 hover:scale-105">
             Privacy Policy
           </div>
         </Link>
