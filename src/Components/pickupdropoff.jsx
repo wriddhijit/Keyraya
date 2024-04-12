@@ -26,7 +26,7 @@ function Pickupdropoff() {
             {/* search button */}
             <button
               type="button"
-              className=" w-36 bg-red-700 text-center text-white text-2xl px-4 py-2 hover:bg-white hover:text-black"
+              className=" w-36 bg-red-600 text-center text-white text-2xl px-4 py-2 hover:bg-red-800 tracking-wider"
             >
               Search
             </button>

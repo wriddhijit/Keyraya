@@ -39,7 +39,7 @@ function Card() {
           <div className="">
             {/* button */}
             <Link to="/Checkout">
-              <button className="bg-red-700 text-center text-white text-base px-4 py-2 rounded-lg hover:bg-white hover:text-black">
+              <button className="bg-red-600 text-center text-white  px-4 py-2 rounded-lg hover:bg-red-800 tracking-wider">
                 Book Now
               </button>
             </Link>

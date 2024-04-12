@@ -41,7 +41,7 @@ const Home = () => {
           <div className="">
             <Link
               to="/Inventorypage"
-              className="inline-block bg-red-800 text-center text-xl px-10 py-3 text-white hover:bg-white hover:text-black"
+              className="inline-block bg-red-600 text-xl px-10 py-3 text-white hover:bg-red-800 tracking-wider"
             >
               <button type="button" className="">
                 Explore

@@ -7,7 +7,7 @@ function Footer() {
         <div className="mt-2">
           <img
             className="w-28 h-20 p-1"
-            src="src/assets/Logo&Typography_DarkBG.png"
+            src="src/assets/logo/Logo&Typography_DarkBG.png"
           ></img>
           {/* <p className="text-s font-semibold ">Keyraya</p> */}
           {/* <div className="border-t w-[70px] border-red-800 border-2 "></div> */}
