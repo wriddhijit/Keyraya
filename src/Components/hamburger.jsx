@@ -44,33 +44,44 @@ function Hamburger() {
       <div
         className={`transition-transform duration-700 ${
           open ? "translate-x-0" : "-translate-x-full"
-        } absolute z-20 text-xl uppercase font-bold tracking-wider w-[320px] text-black bg-slate-200 h-screen pl-5 top-22 left-0`}
+        } absolute z-20 text-xl uppercase font-semibold tracking-wider w-[320px] text-black bg-slate-200 h-screen pl-3 top-22 left-0`}
       >
-        <div className="flex items-center mt-16 h-[50px] px-[10px] cursor-pointer hover:bg-slate-300   ">
-          <Link to="/signuplogin">Log in/Sign UP</Link>
-        </div>
+        <Link to="/signuplogin">
+          <div className="flex items-center mt-16 h-[50px] px-[10px] cursor-pointer hover:bg-slate-300   ">
+            Log in/Sign UP
+          </div>
+        </Link>
         <div className="border-b border-y-zinc-300"></div>
-        <div className="flex items-center  h-[50px] px-[10px] cursor-pointer hover:bg-slate-300">
-          <Link to="/Account">My Account</Link>
-        </div>
+        <Link to="/Account">
+          <div className="flex items-center  h-[50px] px-[10px] cursor-pointer hover:bg-slate-300">
+            My Account
+          </div>
+        </Link>
         <div className="border-b border-y-zinc-300"></div>
+        <Link to="/Inventorypage">
+          <div className="flex items-center  h-[50px] px-[10px] cursor-pointer hover:bg-slate-300">
+            Inventory
+          </div>
+        </Link>
+        <div className="border-b border-y-zinc-300"></div>
+        <Link to="/">
+          <div className="flex items-center  h-[50px] px-[10px]  cursor-pointer hover:bg-slate-300">
+            Blogs
+          </div>
+        </Link>
+        <div className="border-b border-y-zinc-300"></div>
+        <Link to="/About_Us">
+          <div className="flex items-center  h-[50px] px-[10px] cursor-pointer  hover:bg-slate-300">
+            About Us
+          </div>
+        </Link>
 
-        <div className="flex items-center  h-[50px] px-[10px] cursor-pointer hover:bg-slate-300">
-          <Link to="/Inventorypage">Inventory</Link>
-        </div>
         <div className="border-b border-y-zinc-300"></div>
-        <div className="flex items-center  h-[50px] px-[10px]  cursor-pointer hover:bg-slate-300">
-          <Link to="/">Blogs</Link>
-        </div>
-        <div className="border-b border-y-zinc-300"></div>
-        <div className="flex items-center  h-[50px] px-[10px] cursor-pointer  hover:bg-slate-300">
-          <Link to="/About_Us">About Us</Link>
-        </div>
-
-        <div className="border-b border-y-zinc-300"></div>
-        <div className="flex items-center h-[50px] px-[10px] cursor-pointer  hover:bg-slate-300">
-          <Link to="/APrivacy_Policy">Privacy Policy</Link>
-        </div>
+        <Link to="/APrivacy_Policy">
+          <div className="flex items-center h-[50px] px-[10px] cursor-pointer  hover:bg-slate-300">
+            Privacy Policy
+          </div>
+        </Link>
         <div className="border-b border-y-zinc-300"></div>
       </div>
     </>
