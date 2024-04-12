@@ -12,22 +12,33 @@ function Navbar() {
           src="src/assets/logo/Logo&Typography_LightBG.png"
         ></img>
 
-        
-          <div className="md:flex hidden h-full justify-center text-2xl font-normal">
-            <div className="px-[15px] cursor:pointer flex items-center hover:bg-slate-600 hover:text-white hover:opacity-80 hover:scale-110 ">
-              <Link to="/">Home</Link>
-            </div>
-            <div className="px-[15px] cursor:pointer flex items-center hover:bg-slate-600 hover:text-white  hover:opacity-80 hover:scale-110">
-              <Link to="/Inventorypage">Inventory</Link>
-            </div>
-            <div className="px-[15px] cursor:pointer flex items-center hover:bg-slate-600 hover:text-white hover:opacity-80 hover:scale-110">
-              <Link to="/About_Us">About Us</Link>
-            </div>
-            <div className="px-[15px] cursor:pointer flex items-center hover:bg-slate-600 hover:text-white hover:opacity-80 hover:scale-110">
-              <Link to="/Contact_Us">Contact Us</Link>
-            </div>
-          </div>
-        
+        <div className="md:flex hidden h-full justify-center text-2xl font-normal">
+          <Link
+            className="px-[15px] cursor:pointer flex items-center hover:bg-slate-600 hover:text-white hover:opacity-80 hover:scale-110"
+            to="/"
+          >
+            <div className=" ">Home</div>
+          </Link>
+          <Link
+            className="px-[15px] cursor:pointer flex items-center hover:bg-slate-600 hover:text-white hover:opacity-80 hover:scale-110"
+            to="/Inventorypage"
+          >
+            <div className="">Inventory</div>
+          </Link>
+          <Link
+            className="px-[15px] cursor:pointer flex items-center hover:bg-slate-600 hover:text-white hover:opacity-80 hover:scale-110"
+            to="/About_Us"
+          >
+            <div className="">About Us</div>
+          </Link>
+          <Link
+            className="px-[15px] cursor:pointer flex items-center hover:bg-slate-600 hover:text-white hover:opacity-80 hover:scale-110"
+            to="/Contact_Us"
+          >
+            <div className="">Contact Us</div>
+          </Link>
+        </div>
+
         {/* <div className="flex items-center">
           <div className="hidden md:block md:max-w-[45px] p-2 cursor-pointer">
             <img src="src/assets/icons8-user-52.png"></img>
