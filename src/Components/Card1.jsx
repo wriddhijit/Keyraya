@@ -58,11 +58,10 @@ function Card1() {
           <div className="border-l border-gray-300 h-12"></div>
           <div className="">
             {/* button */}
-            <Link to="/Checkout">
               <button className="bg-red-600 text-center text-white px-4 py-2 rounded-lg hover:bg-red-800 tracking-wider">
                 Book Now
               </button>
-            </Link>
+            
           </div>
         </div>
         {/* <div className=" py-1">
