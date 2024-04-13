@@ -1,8 +1,14 @@
 import Dropoff from "./Dropoff";
 import Pickup from "./pickup";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Pickupdropoff() {
+  const navigate = useNavigate();
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate("/Inventory");
+  };
+  
   return (
     <>
       <div className="w-[200%] h-[120%] flex justify-center shadow-slate-950 rounded-md font-bold  text-white">
@@ -13,27 +19,27 @@ function Pickupdropoff() {
               Find your Ride
             </p>
           </div>
-          <div className="">
-            <p className="pb-2 text-2xl">Pickup </p>
-            <Pickup />
-            {/* pickup date and time */}
-          </div>
-          <div className="pb-2">
-            <p className="pb-2 text-2xl">Dropoff </p>
-            <Dropoff />
-            {/* drop date and time */}
-          </div>
-          <div className="">
-            <Link to="/Inventorypage">
+          <form onSubmit={handleSubmit}>
+            <div className="">
+              <p className="pb-2 text-2xl">Pickup </p>
+              <Pickup />
+              {/* pickup date and time */}
+            </div>
+            <div className="pb-2">
+              <p className="pb-2 text-2xl">Dropoff </p>
+              <Dropoff />
+              {/* drop date and time */}
+            </div>
+            <div className="pt-2">
               {/* search button */}
               <button
-                type="button"
+                type="submit"
                 className=" w-36 bg-red-600 text-center text-white text-2xl px-4 py-2 hover:bg-red-800 tracking-wider"
               >
                 Search
               </button>
-            </Link>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
     </>

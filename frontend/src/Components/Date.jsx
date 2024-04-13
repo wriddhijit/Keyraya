@@ -21,6 +21,7 @@ const Calendar = ({onChange}) => {
         dateFormat="dd/MM/yyyy" // Specify the desired date format
         className="p-4 text-black text-md"
         placeholderText="Select a date"
+        required
       />
     </div>
   );
