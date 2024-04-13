@@ -1,18 +1,18 @@
 import { Link } from "react-router-dom";
-import { usePickupDate } from "./PickupDate";
-import { useDropoffDate } from "./DropoffDate";
-import { usePickupTime } from "./PickupTime";
-import { useDropoffTime } from "./DropoffTime";
+// import { usePickupDate } from "./PickupDate";
+// import { useDropoffDate } from "./DropoffDate";
+// import { usePickupTime } from "./PickupTime";
+// import { useDropoffTime } from "./DropoffTime";
 
 function Card1() {
-  const { pickedValue } = usePickupDate();
-  const { pickedValue1 } = useDropoffDate();
-  const { pickedTime } = usePickupTime();
-  const { pickedTime1 } = useDropoffTime();
+  // const { pickedValue } = usePickupDate();
+  // const { pickedValue1 } = useDropoffDate();
+  // const { pickedTime } = usePickupTime();
+  // const { pickedTime1 } = useDropoffTime();
 
   return (
     <>
-      <div className="p-3 ">
+      <div className="p-3  border-2 border-gray-200 shadow-lg rounded-xl">
         <div className="flex justify-center items-center p-4">
           Royal Enfield Continental GT 650
         </div>
@@ -52,7 +52,7 @@ function Card1() {
           </div>
         </div> */}
 
-        <div className="border-b border-gray-400"></div>
+        <div className="border-b border-gray-400 py-2"></div>
         <div className="flex items-center justify-around py-4">
           <div className="px-8 ">{/* price */}Price</div>
           <div className="border-l border-gray-300 h-12"></div>

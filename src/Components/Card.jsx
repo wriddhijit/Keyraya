@@ -12,7 +12,7 @@ function Card() {
 
   return (
     <>
-      <div className="p-3 ">
+      <div className="p-3 border-2 border-gray-200 shadow-lg rounded-xl ">
         <div className="flex justify-center items-center p-4">
           Royal Enfield Continental GT 650
         </div>

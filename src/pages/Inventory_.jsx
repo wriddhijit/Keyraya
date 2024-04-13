@@ -1,7 +1,7 @@
-import InventorySection from "../Components/InventorySection";
+import InventorySection_ from "../Components/InventorySection_";
 import combinedpickupdropoff from "../Components/combinedpickupdropoff";
 
-const Inventory = () => {
+const Inventory_ = () => {
   return (
     <>
       <div className="">
@@ -19,7 +19,7 @@ const Inventory = () => {
 
       <div className="my-4 py-2 pt-0 bg-slate-100">
         {/* <div className="max-w-full grid grid-cols-[500px,1fr]"> */}
-        <div className="max-w-full flex">
+          <div className="max-w-full flex">
           {/* main */}
           {/* <div className="">
             <p>filter</p>
@@ -43,7 +43,7 @@ const Inventory = () => {
             </div> */}
             <div>
               {/* inventory */}
-              <InventorySection />
+              <InventorySection_ />
             </div>
           </div>
         </div>
@@ -52,4 +52,4 @@ const Inventory = () => {
   );
 };
 
-export default Inventory;
+export default Inventory_;

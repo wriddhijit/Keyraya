@@ -12,6 +12,7 @@ import Greetings from "./Components/Greetings";
 import Checkout from "./pages/Checkout";
 import Account from "./pages/Account";
 import Inventory from "./pages/Inventory";
+import Inventory_ from "./pages/Inventory_";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
 
-          <Route path="/Inventory" element={<Inventory />} />
+          <Route path="/Inventorypage" element={<Inventory />} />
           <Route path="/About_Us" element={<About_Us />} />
           <Route path="/Contact_Us" element={<Contact_Us />} />
           <Route path="/signuplogin" element={<Signuplogin />} />
@@ -36,6 +37,7 @@ function App() {
           <Route path="/Privacy_Policy" element={<Privacypolicy />} />
           <Route path="/Checkout" element={<Checkout />} />
           <Route path="/Account" element={<Account />} />
+          <Route path="/Inventory_" element={<Inventory_ />} />
         </Routes>
         <Footer />
       </BrowserRouter>
