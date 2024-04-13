@@ -14,12 +14,12 @@ function Login() {
         <form className="max-w-lg">
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
-              Name
+              Email or Phone
             </label>
             <input
               type="text"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-gray-200 leading-loose focus:outline-none focus:shadow-outline"
-              placeholder="Enter your name as per your Aadhar"
+              placeholder="Enter your email or phone number"
             />
           </div>
 
