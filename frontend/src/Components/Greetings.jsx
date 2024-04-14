@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 
 function Greetings(props) {
   const welcomeMessage = (
-    <div className="flex justify-center items-center bg-slate-500 h-12">
-      <p className=" text-2xl text-white tracking-widest">
+    <div className="flex justify-center items-center bg-slate-900 h-12">
+      <p className=" text-2xl text-white tracking-wider">
         Welcome {props.username}
       </p>
     </div>
   );
 
   const loginPrompt = (
-    <div className="flex justify-center items-center bg-slate-800 h-12  ">
-      <p className="text-2xl text-white tracking-widest">
+    <div className="flex justify-center items-center bg-slate-900 h-12  ">
+      <p className="text-2xl text-white tracking-wider">
         Please
         <Link to="/signuplogin">
           <span className=" text-blue-500 underline"> Log in </span>

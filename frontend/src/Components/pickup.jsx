@@ -19,7 +19,7 @@ function Pickup() {
   return (
     <>
       <div className="flex">
-        <div>
+        <div className="">
           <Calendar onChange={handleCalendarChange} />
         </div>
         <div className="border-l border-black border-1 "></div>

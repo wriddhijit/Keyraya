@@ -1,44 +1,41 @@
 import AnimatedText from "../Components/animatedtext";
-
 import Pickupdropoff from "../Components/pickupdropoff";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <>
-      <div className="object-cover relative">
+      <div className=" relative">
         <img
-          className="w-full h-[900px]"
-          src="src/assets/home.png"
+          className="w-[1920px] h-[800px] "
+          src="/src/assets/photoshop/home.jpg"
           alt="Cover Picture"
         ></img>
 
-        <div className="absolute top-20 left-16">
-          <p className="text-[50px] text-red-700 font-extrabold">
+        <div className="absolute top-[80px] left-12">
+          <p className="text-[50px] text-red-700 font-extrabold mix-blend-lighten">
             Welcome to KEYRAYA
           </p>
         </div>
 
-        <div className="absolute bottom-36 left-16 text-white">
-          <div className="">
-            <p className="text-left pb-2 uppercase text-[56px] font-bold">
+        <div className="absolute bottom-[40px] left-12">
+        <div className=" pb-[70px] ">
+            <p className=" mix-blend-hard-light text-left uppercase text-[54px]">
               <AnimatedText />
             </p>
           </div>
-          <p className="text-left uppercase text-[44px] font-bold">
-            Rental Made Easy
-          </p>
-          <p className="text-left text-[24px] font-thin pt-2 pb-2">
-            Feel and enjoy the torque with every twist of your wrist. With
-            keyraya you can have the ride in its truest sense of the world{" "}
-            <p>
-              {" "}
-              at your fingertips - With more than 50 bikes to choose from our
-              inventory.
+          {/* <div className=" mix-blend-multiply text-black">
+            <p className="text-left uppercase text-[44px] font-bold tracking-tight ">
+              Rental Made Easy
             </p>
-          </p>
+            <p className="text-left text-[22px] font-medium  pb-5 leading-relaxed tracking-tighter">
+              With keyraya you can have the ride in its truest sense <br></br>
+              of the world at your fingertips <br></br><span className=" tracking-tighter">With more than 50 bikes
+              to choose from our inventory</span>
+            </p>
+          </div> */}
 
-          <div className="">
+          {/* <div className= "">
             <Link
               to="/Inventory"
               className="inline-block bg-red-600 text-xl px-10 py-3 text-white hover:bg-red-800 tracking-wider"
@@ -47,11 +44,11 @@ const Home = () => {
                 Explore
               </button>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
 
-      <div className="absolute right-96 top-60  ">
+      <div className="absolute right-[400px] top-[200px] ">
         <Pickupdropoff />
         {/* login box */}
       </div>

@@ -56,7 +56,7 @@ const AnimatedText = () => {
       className="word"
       style={{
         margin: "auto",
-        color: "white",
+        color: "black",
         font: "700 normal 2.5em 'tahoma'",
         textShadow: "5px 2px #222324, 2px 4px #222324, 3px 5px #222324",
       }}

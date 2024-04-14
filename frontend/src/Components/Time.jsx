@@ -18,7 +18,7 @@ const TimePicker = ({ onChange }) => {
         name="time"
         value={selectedTime}
         onChange={handleTimeChange}
-        className="pl-3 pr-10 p-4 text-black text-md"
+        className="pl-3 pr-10 p-4 text-black text-lg"
       >
         <option value="" disabled hidden>
           Select time
