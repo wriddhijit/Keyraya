@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Login() {
     const [formData, setFormData] = useState({
@@ -8,6 +9,7 @@ function Login() {
         password: ''
     });
     const [showPassword, setShowPassword] = useState(false);
+    // const [Captcha, setCaptcha] = useState(null);
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -16,6 +18,11 @@ function Login() {
     const handleChange = (event) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
     };
+
+    // if (!Captcha) {
+    //     alert("Please verify that you are not a robot.");
+    //     return;
+    // }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -86,13 +93,15 @@ function Login() {
                     </div>
 
                     <div className="mb-4">
-                        <label className="block text-gray-700 text-lg font-bold mb-2">
+                    {/* <ReCAPTCHA sitekey="6LdxUbopAAAAALgGaG7pe5bHQX2iGuB_EZQlRtCZ" onChange={(val) => setCaptcha(val)} /> */}
+                        {/* <label className="block text-gray-700 text-lg font-bold mb-2">
                             <input type="checkbox" className="mr-2 leading-loose" />
                             I'm not a robot
-                        </label>
+                        </label> */}
                     </div>
                     <button
                         type="submit"
+                        // disabled={Captcha}
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline"
                     >
                         Login
