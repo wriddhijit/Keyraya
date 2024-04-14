@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import { Link } from "react-router-dom";
 
 function Signup() {
