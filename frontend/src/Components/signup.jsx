@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import ReCAPTCHA from "react-google-recaptcha";
 import { Link } from "react-router-dom";
@@ -15,7 +15,7 @@ function Signup() {
     });
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-    const [captchaValue, setCaptchaValue] = useState(null);
+    // const [Captcha, setCaptcha] = useState(null);
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -36,10 +36,10 @@ function Signup() {
             return;
         }
 
-        if (!captchaValue) {
-            alert("Please verify that you are not a robot.");
-            return;
-        }
+        // if (!Captcha) {
+        //     alert("Please verify that you are not a robot.");
+        //     return;
+        // }
 
         try {
             const response = await axios.post('http://localhost:5000/api/auth/signup', formData);
@@ -121,11 +121,11 @@ function Signup() {
                     </button>
                 </div>
                 <div className="mb-4">
-                <ReCAPTCHA sitekey="6LdxUbopAAAAALgGaG7pe5bHQX2iGuB_EZQlRtCZ" onChange={(val) => setCaptcha(val)} />
+                {/* <ReCAPTCHA sitekey="6LdxUbopAAAAALgGaG7pe5bHQX2iGuB_EZQlRtCZ" onChange={(val) => setCaptcha(val)} /> */}
                 </div>
                 <button
                     type="submit"
-                    disabled={!captchaValue}
+                    // disabled={Captcha}
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline"
                 >
                     Sign Up
