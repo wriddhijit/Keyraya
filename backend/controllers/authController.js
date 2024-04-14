@@ -1,4 +1,4 @@
-const bcrypt = require('bcryptjs');
+ 
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const express = require('express');
@@ -7,21 +7,41 @@ const router = express.Router();
 exports.register = async (req, res) => {
   try {
     const { name, phoneNumber, aadharNumber, drivingLicenseNumber, email, password } = req.body;
-    const hashedPassword = await bcrypt.hash(password, 12);
-    const user = new User({
+
+    // Check if user already exists
+    const userExists = await User.findOne({ email });
+    if (userExists) {
+      return res.status(409).json({ message: 'User already exists with this email.' });
+    }
+
+    // Hash the password before saving
+    const salt = crypto.randomBytes(16).toString('hex'); // Generate a random salt
+    const hash = crypto.pbkdf2Sync(password, salt, 10000, 64, 'sha512').toString('hex');
+    console.log(salt) // Hash the password with salt
+    console.log(hash)
+    const passwordHash = `${hash};${salt}`; // stores hashed password and salt concatenated with a delimiter
+    
+console.log(password)
+    // Create new user object
+    const newUser = new User({
       name,
       phoneNumber,
       aadharNumber,
       drivingLicenseNumber,
       email,
-      passwordHash: hashedPassword
+      passwordHash: passwordHash
     });
-    await user.save();
-    res.status(201).send('User registered');
+
+    // Save the user to the database
+    await newUser.save();
+
+    // Send back a response
+    res.status(201).json({ message: "User registered successfully" });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    console.error('Signup error:', error);
+    res.status(500).json({ error: "Internal server error" });
   }
-};
+}
 
 /***exports.login = async (req, res) => {
   try {

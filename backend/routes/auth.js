@@ -3,8 +3,7 @@ const crypto = require('crypto')
 
 const express = require('express');
 const router = express.Router();
-const authController = require('../controllers/authController');
-const bcrypt = require('bcryptjs');
+// const authController = require('../controllers/authController');
 const User = require('../models/user');  // Adjust path as necessary to where your User model is stored
 const jwt = require('jsonwebtoken');
 router.post('/signup', async (req, res) => {
@@ -19,8 +18,10 @@ router.post('/signup', async (req, res) => {
   
       // Hash the password before saving
       const salt = crypto.randomBytes(16).toString('hex'); // Generate a random salt
-      const hash = crypto.pbkdf2Sync(password, salt, 10000, 64, 'sha512').toString('hex'); // Hash the password with salt
-      const passwordHash = `${hash}:${salt}`; // stores hashed password and salt concatenated with a delimiter
+      const hash = crypto.pbkdf2Sync(password, salt, 10000, 64, 'sha512').toString('hex');
+      console.log(salt) // Hash the password with salt
+      console.log(hash)
+      const passwordHash = `${hash};${salt}`; // stores hashed password and salt concatenated with a delimiter
       
   console.log(password)
       // Create new user object
@@ -30,7 +31,7 @@ router.post('/signup', async (req, res) => {
         aadharNumber,
         drivingLicenseNumber,
         email,
-        passwordHash: hashedPassword
+        passwordHash: passwordHash
       });
   
       // Save the user to the database
@@ -51,14 +52,12 @@ router.post('/signup', async (req, res) => {
         console.log("Received email and password:", req.body.email, req.body.password);
         
 
-          const user = await User.findOne({ email });
-          console.log("Stored hash:", user.passwordHash);  // Log the hash stored in the database
-          console.log("Submitted password:", await bcrypt.hash(password, 10));    // Log the password submitted by the user
+          const user = await User.findOne({ email });   // Log the password submitted by the user
           if (!user) {
               return res.status(404).json({ message: "User not found" });
           }
   
-          const [storedHash, storedSalt] = user.passwordHash.split(':'); // Split stored hashed password and salt
+          const [storedHash, storedSalt] = user.passwordHash.split(';'); // Split stored hashed password and salt
           const hash = crypto.pbkdf2Sync(password, storedSalt, 10000, 64, 'sha512').toString('hex'); // Hash the provided password with stored salt
           const isMatch = hash === storedHash; // Compare hashes 
           if (!isMatch) {
