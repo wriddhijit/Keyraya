@@ -20,7 +20,7 @@ const Home = () => {
 
         <div className="absolute bottom-[50px] left-12">
         <div className=" pb-[70px] ">
-            <p className=" mix-blend-overlay text-left uppercase text-[52px]">
+            <p className=" mix-blend-darkentext-left uppercase text-[52px]">
               <AnimatedText />
             </p>
           </div>
