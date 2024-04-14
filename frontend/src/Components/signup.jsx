@@ -125,7 +125,7 @@ function Signup() {
                 </div>
                 <button
                     type="submit"
-                    disabled={!captchaValue}
+                    // disabled={!captchaValue}
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline"
                 >
                     Sign Up
