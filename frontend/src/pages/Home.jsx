@@ -13,14 +13,14 @@ const Home = () => {
         ></img>
 
         <div className="absolute top-[80px] left-12">
-          <p className="text-[50px] text-red-700 font-extrabold mix-blend-lighten">
+          <p className="text-[50px] text-red-700 font-extrabold mix-blend-color-dodge">
             Welcome to KEYRAYA
           </p>
         </div>
 
-        <div className="absolute bottom-[40px] left-12">
+        <div className="absolute bottom-[50px] left-12">
         <div className=" pb-[70px] ">
-            <p className=" mix-blend-hard-light text-left uppercase text-[54px]">
+            <p className=" mix-blend-overlay text-left uppercase text-[52px]">
               <AnimatedText />
             </p>
           </div>
