@@ -11,7 +11,8 @@ const app = express();
 require('dotenv').config();
 
 // Middleware
-app.use(cors()); // Use CORS to allow cross-origin requests
+app.use(cors());
+app.options("*",cors()) // Use CORS to allow cross-origin requests
 app.use(bodyParser.json()); // Support json encoded bodies
 
 // Routes
