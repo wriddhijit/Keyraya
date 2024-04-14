@@ -12,17 +12,17 @@ function Pickupdropoff() {
   return (
     <>
       <div className="w-[200%] h-[120%] flex justify-center shadow-slate-950 rounded-md font-bold text-black">
-        <div className="p-5 pr-2 grid gap-3 border-red-600 border-2 rounded-xl  ">
+        <div className="p-5 pr-2 grid gap-3 border-2 border-gray-300 shadow-xl shadow-black bg-white rounded-xl  ">
           <div className="flex items:center">
             {/* find your ride */}
-            <p className="text-left py-2 w-[400px] text-4xl border-b-2 border-black mix-blend-darken">
+            <p className="text-left py-2 w-[400px] text-4xl border-b-2 border-black">
               Find your Ride
             </p>
           </div>
-          <form onSubmit={handleSubmit}>
-            
+          <form className="pr-8" onSubmit={handleSubmit}>
+          <div className="pb-2">
               <p className="pb-2 text-2xl">Pickup </p>
-              <div className="pb-2 ">
+              
               <Pickup />
               {/* pickup date and time */}
             </div>

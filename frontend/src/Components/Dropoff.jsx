@@ -18,12 +18,12 @@ function Dropoff() {
 
   return (
     <>
-      <div className="flex  ">
-        <div className="">
+      <div className="flex ">
+        <div className=" border-2 border-gray-400">
           <Calendar onChange={handleCalendarChange} />
         </div>
         <div className="border-l border-black border-1 "></div>
-        <div>
+        <div className=" border-2 border-gray-400 w-[200px]">
           <TimePicker onChange={handleTimeChange} />
         </div>
       </div>

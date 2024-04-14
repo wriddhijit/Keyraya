@@ -7,13 +7,13 @@ const Home = () => {
     <>
       <div className=" relative">
         <img
-          className="w-[1920px] h-[800px] "
+          className=" object-fill w-[1920px] h-[800px]  "
           src="/src/assets/photoshop/home.jpg"
           alt="Cover Picture"
         ></img>
 
         <div className="absolute top-[80px] left-12">
-          <p className="text-[50px] text-red-700 font-extrabold mix-blend-color-dodge">
+          <p className="text-[50px] text-red-600 font-extrabold mix-blend-color-dodge">
             Welcome to KEYRAYA
           </p>
         </div>
@@ -48,7 +48,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="absolute right-[400px] top-[200px] ">
+      <div className="absolute right-[420px] top-[200px] ">
         <Pickupdropoff />
         {/* login box */}
       </div>

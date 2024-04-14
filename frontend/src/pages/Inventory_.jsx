@@ -10,8 +10,8 @@ const Inventory_ = () => {
             className="object-cover opacity-95 "
             src="./src/assets/inventory.png"
           ></img>
-          <div className="absolute top-24 left-8 text-white p-2">
-            <p className="text-left uppercase text-6xl font-bold">INVENTORY</p>
+          <div className="absolute top-16 right-12 text-white p-2">
+            <p className="text-left uppercase text-8xl font-bold">INVENTORY</p>
           </div>
         </div>
       </div>
