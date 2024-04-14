@@ -13,7 +13,7 @@ require('dotenv').config();
 // Middleware
 app.use(cors());
 app.options("*",cors()) // Use CORS to allow cross-origin requests
-app.use(bodyParser.json()); // Support json encoded bodies
+app.use(express.json()); // Support json encoded bodies
 
 // Routes
 app.use('/api/auth', authRoutes);
