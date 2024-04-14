@@ -15,7 +15,7 @@ function Signup() {
     });
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-    const [captchaValue, setCaptchaValue] = useState(null);
+    const [captchaValue, setCaptcha] = useState(null);
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
