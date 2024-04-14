@@ -1,8 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
+  const [Captcha, setCaptcha] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+  };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -56,12 +63,16 @@ function Login() {
           </div>
 
           <div className="mb-4">
-            <label className="block text-gray-700 text-lg font-bold mb-2">
+
+          <ReCAPTCHA sitekey="6LdxUbopAAAAALgGaG7pe5bHQX2iGuB_EZQlRtCZ" onChange={(val) => setCaptcha(val)} />
+
+            {/* <label className="block text-gray-700 text-lg font-bold mb-2">
               <input type="checkbox" className="mr-2 leading-loose" />
               I'm not a robot
-            </label>
+            </label> */}
           </div>
           <button
+          disabled={!Captcha}
             type="submit"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-[236px] rounded focus:outline-none focus:shadow-outline"
           >
