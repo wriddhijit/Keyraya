@@ -86,7 +86,7 @@ function Signup() {
                     <button
                         type="button"
                         onClick={togglePasswordVisibility}
-                        className="absolute inset-y-0 right-0 flex items-center px-3"
+                        className="absolute inset-y-0 right-0 flex items-center px-3 text-gray-700"
                     >
                         <img
                             src={showPassword ? "src/assets/icons8-hide-password-50.png" : "src/assets/icons8-show-password-50.png"}
@@ -111,7 +111,7 @@ function Signup() {
                     <button
                         type="button"
                         onClick={toggleConfirmPasswordVisibility}
-                        className="absolute inset-y-0 right-0 flex items-center px-3"
+                        className="absolute inset-y-0 right-0 flex items-center px-3 "
                     >
                         <img
                             src={showConfirmPassword ? "src/assets/icons8-hide-password-50.png" : "src/assets/icons8-show-password-50.png"}
