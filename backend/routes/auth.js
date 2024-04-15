@@ -19,8 +19,7 @@ router.post('/signup', async (req, res) => {
       // Hash the password before saving
       const salt = crypto.randomBytes(16).toString('hex'); // Generate a random salt
       const hash = crypto.pbkdf2Sync(password, salt, 10000, 64, 'sha512').toString('hex'); // Hash the password with salt
-      const hashedPassword = `${hash};${salt}`;
- // stores hashed password and salt concatenated with a delimiter
+      const hashedPassword = `${hash};${salt}`; // stores hashed password and salt concatenated with a delimiter
       
       console.log(hashedPassword)
       // Create new user object
@@ -48,9 +47,6 @@ router.post('/signup', async (req, res) => {
       const { email, password } = req.body; // Using email to align with typical login credentials
   
       try {
-        console.log("Received email and password:", req.body.email, req.body.password);
-        
-
           const user = await User.findOne({ email });   // Log the password submitted by the user
           if (!user) {
               return res.status(404).json({ message: "User not found" });
