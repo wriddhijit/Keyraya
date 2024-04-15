@@ -2,7 +2,6 @@ import { useState } from "react";
 import axios from "axios";
 // import ReCAPTCHA from "react-google-recaptcha";
 import { Link } from "react-router-dom";
-import LoadingSpinner from "./LoadingSpinner";
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -17,7 +16,6 @@ function Signup() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [signupSuccess, setSignupSuccess] = useState(false);
-  const [loading, setLoading] = useState(false);
   // const [Captcha, setCaptcha] = useState(null);
 
   const togglePasswordVisibility = () => {
@@ -34,7 +32,7 @@ function Signup() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setLoading(true);
+    
 
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords do not match");
@@ -62,8 +60,6 @@ function Signup() {
         "Signup failed: " +
           (error.response ? error.response.data.error : "No response")
       );
-    } finally {
-      setLoading(false);
     }
   };
 
