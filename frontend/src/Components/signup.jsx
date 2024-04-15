@@ -2,8 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 // import ReCAPTCHA from "react-google-recaptcha";
 import { Link } from "react-router-dom";
-import LoadingSpinner from "./LoadingSpinner";
-
+import { useNavigate } from "react-router-dom";
 function Signup() {
   const [formData, setFormData] = useState({
       name: '',
@@ -14,7 +13,7 @@ function Signup() {
       password: '',
       confirmPassword: ''
   });
-
+  const navigate = useNavigate(); // Hook for navigation
   const handleChange = (e) => {
       setFormData({
           ...formData,
@@ -33,6 +32,7 @@ function Signup() {
           const response = await axios.post('http://localhost:5000/api/auth/signup', formData);
           console.log('Signup successful:', response.data);
           alert("Signup successful!"); // Optionally handle redirect here
+          navigate('/');
       } catch (error) {
           console.error('Signup error:', error.response ? error.response.data : 'No response');
           alert("Signup failed: " + (error.response ? error.response.data.error : 'No response'));
