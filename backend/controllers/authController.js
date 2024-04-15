@@ -1,4 +1,4 @@
-const bcrypt = require('bcryptjs');
+
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const express = require('express');
@@ -23,7 +23,7 @@ exports.register = async (req, res) => {
   }
 };
 
-/***exports.login = async (req, res) => {
+exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({ email });
@@ -42,23 +42,23 @@ exports.register = async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
-};**/
-
-exports.login = async (req, res) => {
-  console.log("Received email and password:", req.body.email, req.body.password);
-  try {
-   
-    // Assuming a user model and that you're checking credentials after this
-    const user = await User.findOne({ email: req.body.email });
-    if (!user) {
-      return res.status(404).send('User not found');
-    }
-    // Continue your authentication logic here...
-  } catch (error) {
-    console.error("Error during simplified login:", error);
-    res.status(500).send("Internal Server Error");
-  }
 };
+
+// //exports.login = async (req, res) => {
+//   console.log("Received email and password:", req.body.email, req.body.password);
+//   try {
+   
+//     // Assuming a user model and that you're checking credentials after this
+//     const user = await User.findOne({ email: req.body.email });
+//     if (!user) {
+//       return res.status(404).send('User not found');
+//     }
+//     // Continue your authentication logic here...
+//   } catch (error) {
+//     console.error("Error during simplified login:", error);
+//     res.status(500).send("Internal Server Error");
+//   }
+// };
 
 // Setup route to use the login function
 router.post('/login', exports.login);
