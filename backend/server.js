@@ -5,6 +5,7 @@ const cors = require('cors');
 const authRoutes = require('./routes/auth');
 const inventoryRoutes = require('./routes/inventory');
 const reservationRoutes = require('./routes/reservationroute'); 
+
 const app = express();
 
 // Load environment variables from .env file
@@ -12,7 +13,7 @@ require('dotenv').config();
 
 // Middleware
 app.use(cors());
-app.options("*",cors()) // Use CORS to allow cross-origin requests
+app.options(cors()) // Use CORS to allow cross-origin requests
 app.use(express.json()); // Support json encoded bodies
 
 // Routes
