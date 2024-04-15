@@ -1,12 +1,11 @@
 const express = require('express');
-const Motorcycle = require('../models/motorcycle');
-
+const InventoryItem = require('../models/inventoryItem')
 const router = express.Router();
 
 // POST: Add a new motorcycle to the inventory
 router.post('/', async (req, res) => {
-  const { model, price, description, image, inStock } = req.body;
-  const motorcycle = new Motorcycle({ model, price, description, image, inStock });
+  const { title,model, price, description, image, inStock } = req.body;
+  const motorcycle = new Motorcycle({ title,model, price, description, image, inStock });
   
   try {
     const savedMotorcycle = await motorcycle.save();
@@ -26,6 +25,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Additional routes for updating and deleting can be added here
+
 
 module.exports = router;

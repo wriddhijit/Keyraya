@@ -1,17 +1,12 @@
 const mongoose = require('mongoose');
 
-const inventoryItemSchema = new mongoose.Schema({
+const motorcycleSchema = new mongoose.Schema({
   title: { type: String, required: true },
-  category: [String],
-  style: [String],
-  brand: [String],
-  color: [String],
-  size: [String],
-  price: { type: Number, required: true },
-  availability: {
-    from: Date,
-    to: Date
-  }
+  model: String,
+  price: Number,
+  description: String,
+  image: String, // URL to the image
+  inStock: Boolean, // Whether the motorcycle is in stock
 });
 
-module.exports = mongoose.model('InventoryItem', inventoryItemSchema);
+module.exports = mongoose.model('Motorcycle', motorcycleSchema);
