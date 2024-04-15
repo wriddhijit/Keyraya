@@ -48,7 +48,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="absolute right-[420px] top-[200px] ">
+      <div className="absolute right-[420px] top-[35%] ">
         <Pickupdropoff />
         {/* login box */}
       </div>
