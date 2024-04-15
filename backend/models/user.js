@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -14,7 +13,6 @@ const userSchema = new mongoose.Schema({
   if (!this.isModified('passwordHash')) return next();
 
   
-  this.passwordHash = await bcrypt.hash(this.passwordHash, 12);
   next();
 });
 userSchema.methods.comparePassword = async function(candidatePassword) {
