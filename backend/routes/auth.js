@@ -19,9 +19,10 @@ router.post('/signup', async (req, res) => {
       // Hash the password before saving
       const salt = crypto.randomBytes(16).toString('hex'); // Generate a random salt
       const hash = crypto.pbkdf2Sync(password, salt, 10000, 64, 'sha512').toString('hex'); // Hash the password with salt
-      const hashedPassword = `${hash}:${salt}`; // stores hashed password and salt concatenated with a delimiter
+      const hashedPassword = `${hash};${salt}`;
+ // stores hashed password and salt concatenated with a delimiter
       
-  console.log(password)
+      console.log(hashedPassword)
       // Create new user object
       const newUser = new User({
         name,
@@ -29,7 +30,7 @@ router.post('/signup', async (req, res) => {
         aadharNumber,
         drivingLicenseNumber,
         email,
-        passwordHash: passwordHash
+        passwordHash: hashedPassword
       });
   
       // Save the user to the database
@@ -55,8 +56,10 @@ router.post('/signup', async (req, res) => {
               return res.status(404).json({ message: "User not found" });
           }
   
-          const [storedHash, storedSalt] = user.passwordHash.split(';'); // Split stored hashed password and salt
+          const [storedHash, storedSalt] = user.passwordHash.split(';'); 
+
           const hash = crypto.pbkdf2Sync(password, storedSalt, 10000, 64, 'sha512').toString('hex'); // Hash the provided password with stored salt
+
           const isMatch = hash === storedHash; // Compare hashes 
           if (!isMatch) {
               return res.status(401).json({ message: "Invalid credentials" });
