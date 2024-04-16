@@ -13,7 +13,6 @@ const app = express();
 // Load environment variables from .env file
 require("dotenv").config();
 
-
 const razorpay = new Razorpay({
   key_id: "rzp_test_3SpvPC9jbjQ7oy",
   key_secret: "Ya2GiZuKxxWWdLuEs2yS7UYx",
@@ -46,7 +45,7 @@ mongoose
 
   app.post('/razorpay', async (req, res) => {
     const payment_capture = 1
-    const amount = 499
+    const amount = req.body.price
     const currency = 'INR'
   
     const options = {

@@ -98,7 +98,7 @@ function Checkout() {
                 >
                   Make Payment
                 </button> */}
-                <DisplayRazorpay />
+                <DisplayRazorpay price = {checkoutPrice}/>
               </div>
             </div>
           </div>
