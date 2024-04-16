@@ -6,9 +6,7 @@ import { usePrice } from "../Components/price";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useBike } from "../Components/bikeInfo";
-
-//import { displayRazorpay } from "../Components/razorpay";
-
+import  DisplayRazorpay  from "../Components/razorpay";
 
 function Checkout() {
   const { pickedValue } = usePickupDate();
@@ -19,10 +17,10 @@ function Checkout() {
   const { checkoutPrice } = usePrice();
   const { bikeID } = useBike();
 
-  const [ motorcycle, setMotorcycle ] = useState(null);
+  const [motorcycle, setMotorcycle] = useState(null);
 
   useEffect(() => {
-    console.log(`http://localhost:5000/api/inventory/${bikeID}`)
+    console.log(`http://localhost:5000/api/inventory/${bikeID}`);
     axios
       .get(`http://localhost:5000/api/inventory/${bikeID}`)
       .then((response) => {
@@ -32,7 +30,6 @@ function Checkout() {
       .catch((error) => {
         console.error("Error fetching motorcycles:", error);
       });
-      
   }, [bikeID]);
 
   return (
@@ -95,12 +92,13 @@ function Checkout() {
                 <div>{/* Total price */}</div>
               </div>
               <div className="flex justify-center mt-">
-                <button
-                  //onClick={<displayRazorpay />}
+                {/* <button
+                  <displayRazorpay />
                   className="bg-red-600 w-[600px] text-white text-xl tracking-wider px-4 py-2 rounded-lg hover:bg-red-800"
                 >
                   Make Payment
-                </button>
+                </button> */}
+                <DisplayRazorpay />
               </div>
             </div>
           </div>

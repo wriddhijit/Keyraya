@@ -19,29 +19,6 @@ const razorpay = new Razorpay({
   key_secret: "Ya2GiZuKxxWWdLuEs2yS7UYx",
 });
 
-app.post("./razorpay", async (req, res) => {
-  const payment_capture = 1;
-  const amount = 500;
-  const currency = "INR";
-
-  razorpay.orders.create({
-    amount: (amount * 100).toString(),
-    currency,
-    receipt: shortid.generate(),
-    payment_capture,
-  });
-  try {
-    const response = await razorpay.orders.create(options);
-    console.log(response);
-    res.json({
-      id: response.id,
-      currency: response.currency,
-      amount: response.amount
-    })
-  } catch (error) {
-    console.log(error);
-  }
-});
 
 // Middleware
 app.use(cors());
@@ -66,6 +43,34 @@ mongoose
   .then(() => console.log("MongoDB connected successfully"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
+
+  app.post('/razorpay', async (req, res) => {
+    const payment_capture = 1
+    const amount = 499
+    const currency = 'INR'
+  
+    const options = {
+        amount: amount * 100,
+        currency,
+        receipt: shortid.generate(),
+        payment_capture
+    }
+  
+    try {
+        const response = await razorpay.orders.create(options)
+        console.log(response)
+        res.json({
+            id: response.id,
+            currency: response.currency,
+            amount: response.amount
+        })
+    } catch (error) {
+        console.log(error)
+    }
+  })
+  
+
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
