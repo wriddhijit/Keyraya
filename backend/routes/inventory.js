@@ -1,5 +1,5 @@
 const express = require('express');
-const InventoryItem = require('../models/inventoryItem')
+const Motorcycle = require('../models/inventoryItem')
 const router = express.Router();
 
 // POST: Add a new motorcycle to the inventory
@@ -21,6 +21,7 @@ router.get('/', async (req, res) => {
     const motorcycles = await Motorcycle.find();
     res.json(motorcycles);
   } catch (error) {
+    console.log(error)
     res.status(500).json({ message: error.message });
   }
 });
