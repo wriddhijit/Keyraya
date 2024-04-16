@@ -25,7 +25,18 @@ router.get('/', async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-
+router.get('/:id', async (req, res) => {
+  const id = req.params.id;
+  try {
+    const motorcycle = await Motorcycle.findById(id);
+    res.json(motorcycle);
+    console.log(id)
+    console.log(motorcycle)
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ message: error.message });
+  }
+});
 
 
 module.exports = router;

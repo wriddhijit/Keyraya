@@ -3,27 +3,37 @@ import { useDropoffDate } from "../Components/DropoffDate";
 import { usePickupTime } from "../Components/PickupTime";
 import { useDropoffTime } from "../Components/DropoffTime";
 import { usePrice } from "../Components/price";
-import PropTypes from "prop-types";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { useBike } from "../Components/bikeInfo";
+
 //import { displayRazorpay } from "../Components/razorpay";
 
-// Card.propTypes = {
-//   motorcycle: PropTypes.shape({
-//     title: PropTypes.string.isRequired,
-//     image: PropTypes.string.isRequired,
-//     model: PropTypes.string.isRequired,
-//     price: PropTypes.number.isRequired,
-//     inStock: PropTypes.bool.isRequired,
-//   }).isRequired,
-// };
 
 function Checkout() {
-
   const { pickedValue } = usePickupDate();
   const { pickedValue1 } = useDropoffDate();
   const { pickedTime } = usePickupTime();
   const { pickedTime1 } = useDropoffTime();
 
-  const {checkoutPrice} = usePrice();
+  const { checkoutPrice } = usePrice();
+  const { bikeID } = useBike();
+
+  const [ motorcycle, setMotorcycle ] = useState(null);
+
+  useEffect(() => {
+    console.log(`http://localhost:5000/api/inventory/${bikeID}`)
+    axios
+      .get(`http://localhost:5000/api/inventory/${bikeID}`)
+      .then((response) => {
+        console.log("Fetched motorcycles:", response.data);
+        setMotorcycle(response.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching motorcycles:", error);
+      });
+      
+  }, [bikeID]);
 
   return (
     <>
@@ -34,10 +44,10 @@ function Checkout() {
           </div>
           <div className="grid grid-cols-[500px,700px]">
             <div className="flex flex-col items-center pl-2">
-              <img src="https://th.bing.com/th/id/OIP.4oi5fQiZUJmoTLK-2OuYGAHaFS?rs=1&pid=ImgDetMain"></img>
+              <img src={motorcycle?.image}></img>
               <p className="pt-4 text-2xl">
                 {" "}
-                Royal Enfield Continental GT 650 {/* Bike Name */}
+                {motorcycle?.title} {/* Bike Name */}
               </p>
             </div>
             <div className=" flex flex-col pl-2 pr-8 justify-evenly">
@@ -85,9 +95,10 @@ function Checkout() {
                 <div>{/* Total price */}</div>
               </div>
               <div className="flex justify-center mt-">
-                <button 
-                //onClick={<displayRazorpay />}
-                className="bg-red-600 w-[600px] text-white text-xl tracking-wider px-4 py-2 rounded-lg hover:bg-red-800">
+                <button
+                  //onClick={<displayRazorpay />}
+                  className="bg-red-600 w-[600px] text-white text-xl tracking-wider px-4 py-2 rounded-lg hover:bg-red-800"
+                >
                   Make Payment
                 </button>
               </div>
