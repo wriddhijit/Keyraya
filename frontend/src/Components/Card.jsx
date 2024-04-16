@@ -3,6 +3,19 @@ import { usePickupDate } from "./PickupDate";
 import { useDropoffDate } from "./DropoffDate";
 import { usePickupTime } from "./PickupTime";
 import { useDropoffTime } from "./DropoffTime";
+import React from 'react';
+import PropTypes from 'prop-types';
+
+Card.propTypes = {
+  motorcycle: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    model: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    inStock: PropTypes.bool.isRequired,
+  }).isRequired,
+};
+
 
 function Card({ motorcycle }) {
   const { pickedValue } = usePickupDate();

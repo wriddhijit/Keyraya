@@ -11,11 +11,11 @@ mongoose.connect(process.env.MONGO_URI, {
 
 const motorcycles = [
   {
-    title:'Kawasaki Ninja 400',
+    title:'Kawasaki Ninja 40',
     model: '',
     price: 4999,
     description: 'Lightweight, sharp-looking, high-performance sport model',
-    image: "/seeds/bikepic/aprilia.jpg", 
+    image: '/seeds/bikepic/aprilia.jpg', 
     inStock: true
   },
   {
