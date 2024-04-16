@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useUser } from "./user";
 
 function Login() {
     const navigate = useNavigate();
@@ -9,6 +10,8 @@ function Login() {
         password: "",
     });
     const [showPassword, setShowPassword] = useState(false);
+
+    const { setUser } = useUser();
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -25,6 +28,8 @@ function Login() {
                 "http://localhost:5000/api/auth/login",
                 formData
             );
+            console.log(response.data)
+            setUser(response.data);
             console.log("Login successful:", response.data);
             navigate('/'); // Navigate to the home page
         } catch (error) {

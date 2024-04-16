@@ -6,7 +6,6 @@ function DisplayRazorpay({price}) {
   const [Razorpay] = useRazorpay();
   const [ data, setData] = useState(null);
 
-
   useEffect (() => {
     fetch("http://localhost:5000/razorpay", { method: "POST", headers : {"Content-Type" : "application/json"} , body: JSON.stringify({price})})
       .then((t) => {

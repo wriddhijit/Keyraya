@@ -1,10 +1,13 @@
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Click } from "./Click";
+import { useUser } from "./user";
 
 function Hamburger() {
   const [open, setOpen] = useState(false);
   const node = useRef();
+
+  const { user } = useUser();
 
   Click(node, () => setOpen(false));
 
@@ -46,11 +49,17 @@ function Hamburger() {
           open ? "translate-x-0" : "-translate-x-full"
         } absolute z-20 text-xl uppercase font-semibold tracking-wider w-[320px] text-black bg-slate-200 h-screen pl-3 top-22 left-0`}
       >
-        <Link to="/signuplogin">
-          <div className="flex items-center mt-16 h-[50px] px-[10px] cursor-pointer hover:bg-slate-300 hover:scale-105   ">
-            Log in/Sign UP
-          </div>
-        </Link>
+        { user ? <Link to="/logout">
+            <div className="flex items-center mt-16 h-[50px] px-[10px] cursor-pointer hover:bg-slate-300 hover:scale-105   ">
+              Log out
+            </div>
+          </Link> : 
+          <Link to="/signuplogin">
+            <div className="flex items-center mt-16 h-[50px] px-[10px] cursor-pointer hover:bg-slate-300 hover:scale-105   ">
+              Log in/Sign UP
+            </div>
+          </Link>
+        }
         <div className="border-b border-y-zinc-300"></div>
         <Link to="/Account">
           <div className="flex items-center  h-[50px] px-[10px] cursor-pointer hover:bg-slate-300 hover:scale-105">

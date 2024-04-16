@@ -14,8 +14,8 @@ const app = express();
 require("dotenv").config();
 
 const razorpay = new Razorpay({
-  key_id: "rzp_test_3SpvPC9jbjQ7oy",
-  key_secret: "Ya2GiZuKxxWWdLuEs2yS7UYx",
+  key_id: process.env.RAZORPAY_ID_KEY,
+  key_secret: process.env.RAZORPAY_SECRET_KEY
 });
 
 

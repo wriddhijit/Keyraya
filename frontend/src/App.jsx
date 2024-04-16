@@ -13,6 +13,7 @@ import Checkout from "./pages/Checkout";
 import Account from "./pages/Account";
 import Inventory from "./pages/Inventory";
 import Inventory_ from "./pages/Inventory_";
+import Logout from "./pages/Logout";
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Logout" element={<Logout />} />
 
           <Route path="/Inventory" element={<Inventory />} />
           <Route path="/About_Us" element={<About_Us />} />
