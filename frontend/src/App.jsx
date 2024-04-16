@@ -24,7 +24,7 @@ function App() {
 
         <Hamburger />
 
-        <Greetings isLoggedIn={false} username="User" />
+        {/* <Greetings isLoggedIn={false} username="User" /> */}
 
         <Routes>
           <Route path="/" element={<Home />} />

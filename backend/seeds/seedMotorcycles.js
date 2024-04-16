@@ -11,24 +11,24 @@ mongoose.connect(process.env.MONGO_URI, {
 
 const motorcycles = [
   {
-    title:'kawasaki',
-    model: 'Kawasaki Ninja 400',
+    title:'Kawasaki Ninja 400',
+    model: '',
     price: 4999,
     description: 'Lightweight, sharp-looking, high-performance sport model',
     image: 'keyraya/frontend/src/assets/bikepic/aprilia.jpg', 
     inStock: true
   },
   {
-    title:'harley',
-    model: 'Harley Davidson Street 750',
+    title:'Harley Davidson Street 750',
+    model: '',
     price: 7500,
     description: 'Urban cruiser with authentic Harley-Davidson style',
     image: 'http://example.com/path/to/another-image.jpg',
     inStock: false
   },
   {
-    title:'',
-    model: 'Harley Davidson Street 750',
+    title:'Harley Davidson Street 750',
+    model: '',
     price: 7500,
     description: 'Urban cruiser with authentic Harley-Davidson style',
     image: 'http://example.com/path/to/another-image.jpg',

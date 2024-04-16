@@ -41,7 +41,7 @@
   // }
 
   // export default InventorySection;
-  import React, { useEffect, useState } from 'react';
+  import { useEffect, useState } from 'react';
   import axios from 'axios';
   import Card from "./Card";
 
@@ -65,7 +65,7 @@
           <div className="mx-6">
             <p className="text-xl pl-10 font-semibold">Motorcycles Available</p>
           </div>
-          <div className="my-6 flex flex-wrap gap-y-10 justify-evenly min-h-screen p-2">
+          <div className="my-6 flex flex-wrap gap-y-10 gap-x-10 mx-10 justify-evenly p-2">
             {motorcycles.map(motorcycle => (
               <Card key={motorcycle._id} motorcycle={motorcycle} />
             ))}
