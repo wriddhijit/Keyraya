@@ -18,7 +18,6 @@ const razorpay = new Razorpay({
   key_secret: process.env.RAZORPAY_SECRET_KEY
 });
 
-
 // Middleware
 app.use(cors());
 app.use("/seeds", express.static("seeds"));
