@@ -5,11 +5,23 @@ const cors = require('cors');
 const authRoutes = require('./routes/auth');
 const inventoryRoutes = require('./routes/inventory');
 const reservationRoutes = require('./routes/reservationroute'); 
+const Razorpay = require('razorpay');
+
+const razorpay = new Razorpay({
+  key_id: "rzp_test_3SpvPC9jbjQ7oy",
+  key_secret: "Ya2GiZuKxxWWdLuEs2yS7UYx"
+})
 
 const app = express();
 
 // Load environment variables from .env file
 require('dotenv').config();
+
+app.post('./razorpay', async (req, res) => {
+  
+  razorpay.orders.create({amount, currency, receipt, payment_capture})
+
+})
 
 // Middleware
 app.use(cors());

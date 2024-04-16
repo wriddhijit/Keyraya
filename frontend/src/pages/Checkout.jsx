@@ -2,6 +2,7 @@ import { usePickupDate } from "../Components/PickupDate";
 import { useDropoffDate } from "../Components/DropoffDate";
 import { usePickupTime } from "../Components/PickupTime";
 import { useDropoffTime } from "../Components/DropoffTime";
+import { displayRazorpay } from "../Components/razorpay";
 
 function Checkout() {
 
@@ -70,7 +71,9 @@ function Checkout() {
                 <div>{/* Total price */}</div>
               </div>
               <div className="flex justify-center mt-">
-                <button className="bg-red-600 w-[600px] text-white text-xl tracking-wider px-4 py-2 rounded-lg hover:bg-red-800">
+                <button 
+                onClick={<displayRazorpay />}
+                className="bg-red-600 w-[600px] text-white text-xl tracking-wider px-4 py-2 rounded-lg hover:bg-red-800">
                   Make Payment
                 </button>
               </div>
