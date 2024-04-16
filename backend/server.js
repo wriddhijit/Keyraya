@@ -25,6 +25,7 @@ app.post('./razorpay', async (req, res) => {
 
 // Middleware
 app.use(cors());
+app.use('/seeds', express.static('seeds'));
 app.options(cors()) // Use CORS to allow cross-origin requests
 app.use(express.json()); // Support json encoded bodies
 

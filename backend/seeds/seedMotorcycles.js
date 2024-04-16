@@ -15,7 +15,7 @@ const motorcycles = [
     model: '',
     price: 900,
     description: 'Lightweight, sharp-looking, high-performance sport model',
-    image: '/seeds/bikepic/aprilia.jpg', 
+    image: 'http://localhost:5000/seeds/bikepic/ninja-h2.jpg', 
     inStock: true
   },
   {
@@ -23,7 +23,7 @@ const motorcycles = [
     model: '',
     price: 700,
     description: 'Urban cruiser with authentic Harley-Davidson style',
-    image: 'http://example.com/path/to/another-image.jpg',
+    image: 'http://localhost:5000/seeds/bikepic/BMW-S1000RR.jpg',
     inStock: false
   },
   {
@@ -31,7 +31,7 @@ const motorcycles = [
     model: '',
     price: 800,
     description: 'Urban cruiser with authentic Harley-Davidson style',
-    image: 'http://example.com/path/to/another-image.jpg',
+    image: 'http://localhost:5000/seeds/bikepic/ducati.jpg',
     inStock: false
   },
   {
@@ -39,7 +39,7 @@ const motorcycles = [
     model: '',
     price: 500,
     description: 'Urban cruiser with authentic Harley-Davidson style',
-    image: 'http://example.com/path/to/another-image.jpg',
+    image: 'http://localhost:5000/seeds/bikepic/triumph-street-triple.jpg',
     inStock: false
   },
   {
@@ -47,7 +47,7 @@ const motorcycles = [
     model: '',
     price: 750,
     description: 'Urban cruiser with authentic Harley-Davidson style',
-    image: 'http://example.com/path/to/another-image.jpg',
+    image: 'http://localhost:5000/seeds/bikepic/yamaha-yzf-r1.jpg',
     inStock: false
   },
   {
@@ -55,7 +55,7 @@ const motorcycles = [
     model: '',
     price: 650,
     description: 'Urban cruiser with authentic Harley-Davidson style',
-    image: 'http://example.com/path/to/another-image.jpg',
+    image: 'http://localhost:5000/seeds/bikepic/aprilia.jpg',
     inStock: false
   },
 ];
