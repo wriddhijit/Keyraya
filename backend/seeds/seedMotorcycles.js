@@ -15,7 +15,7 @@ const motorcycles = [
     model: 'Kawasaki Ninja 400',
     price: 4999,
     description: 'Lightweight, sharp-looking, high-performance sport model',
-    image: 'http://example.com/path/to/image.jpg', 
+    image: 'keyraya/frontend/src/assets/bikepic/aprilia.jpg', 
     inStock: true
   },
   {
@@ -26,7 +26,14 @@ const motorcycles = [
     image: 'http://example.com/path/to/another-image.jpg',
     inStock: false
   },
- 
+  {
+    title:'',
+    model: 'Harley Davidson Street 750',
+    price: 7500,
+    description: 'Urban cruiser with authentic Harley-Davidson style',
+    image: 'http://example.com/path/to/another-image.jpg',
+    inStock: false
+  },
 ];
 
 // Function to seed motorcycles
