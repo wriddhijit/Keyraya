@@ -1,5 +1,5 @@
 import useRazorpay from "react-razorpay";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 function DisplayRazorpay() {
   // const options = {
@@ -25,9 +25,8 @@ function DisplayRazorpay() {
   const [Razorpay] = useRazorpay();
   const [ data, setData] = useState(null);
 
-  const handlePayment = useCallback(() => {
-    // const order = await createOrder(params);
 
+  useEffect (() => {
     fetch("http://localhost:5000/razorpay", { method: "POST", headers : {"Content-Type" : "application/json"}})
       .then((t) => {
         if (!t.ok) {
@@ -37,7 +36,13 @@ function DisplayRazorpay() {
       .then((res) => {
         setData(res);
       });
+    }
+  , []);
+  
+  const handlePayment = () => {
+    // const order = await createOrder(params);
 
+    
       console.log(data)
 
     const options = {
@@ -62,7 +67,7 @@ function DisplayRazorpay() {
 
     const rzpay = new Razorpay(options);
     rzpay.open();
-  }, [Razorpay]);
+  }
 
   return (
     
