@@ -15,7 +15,7 @@ const motorcycles = [
     model: '',
     price: 4999,
     description: 'Lightweight, sharp-looking, high-performance sport model',
-    image: 'keyraya/frontend/src/assets/bikepic/aprilia.jpg', 
+    image: "/seeds/bikepic/aprilia.jpg", 
     inStock: true
   },
   {
