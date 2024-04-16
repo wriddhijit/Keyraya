@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -6,36 +5,14 @@ const cors = require('cors');
 const authRoutes = require('./routes/auth');
 const inventoryRoutes = require('./routes/inventory');
 const reservationRoutes = require('./routes/reservationroute'); 
-// const Razorpay = require('razorpay');
-
-// const razorpay = new Razorpay({
-//   key_id: "rzp_test_3SpvPC9jbjQ7oy",
-//   key_secret: "Ya2GiZuKxxWWdLuEs2yS7UYx"
-// })
-=======
-const express = require("express");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const authRoutes = require("./routes/auth");
-const inventoryRoutes = require("./routes/inventory");
-const reservationRoutes = require("./routes/reservationroute");
-const Razorpay = require("razorpay");
-const shortid = require("shortid");
->>>>>>> 021e97a5555c1d7df72334b873a8005fa9f92f6a
+const Razorpay = require('razorpay');
+const shortid = require('shortid');
 
 const app = express();
 
 // Load environment variables from .env file
 require("dotenv").config();
 
-<<<<<<< HEAD
-// app.post('./razorpay', async (req, res) => {
-  
-//   razorpay.orders.create({amount, currency, receipt, payment_capture})
-
-//})
-=======
 
 const razorpay = new Razorpay({
   key_id: "rzp_test_3SpvPC9jbjQ7oy",
@@ -65,7 +42,6 @@ app.post("./razorpay", async (req, res) => {
     console.log(error);
   }
 });
->>>>>>> 021e97a5555c1d7df72334b873a8005fa9f92f6a
 
 // Middleware
 app.use(cors());

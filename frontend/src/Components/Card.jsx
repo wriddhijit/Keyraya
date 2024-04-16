@@ -3,7 +3,12 @@ import { usePickupDate } from "./PickupDate";
 import { useDropoffDate } from "./DropoffDate";
 import { usePickupTime } from "./PickupTime";
 import { useDropoffTime } from "./DropoffTime";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
+import { usePrice } from "./price";
+import { useNavigate } from "react-router-dom";
+import { useBike } from "./bikeInfo";
+
 
 Card.propTypes = {
   motorcycle: PropTypes.shape({
@@ -12,15 +17,55 @@ Card.propTypes = {
     model: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     inStock: PropTypes.bool.isRequired,
+    _id: PropTypes.string.isRequired,
   }).isRequired,
 };
 
+function timeStringToDate(timeString) {
+  let timeParts = timeString.split(/:| /);
+  let hours = parseInt(timeParts[0], 10);
+  let minutes = parseInt(timeParts[1], 10);
+  if (timeParts[2].toUpperCase() === "PM" && hours !== 12) {
+    hours += 12;
+  }
+  let date = new Date();
+  date.setHours(hours);
+  date.setMinutes(minutes);
+  date.setSeconds(0);
+  return date;
+}
 
 function Card({ motorcycle }) {
   const { pickedValue } = usePickupDate();
   const { pickedValue1 } = useDropoffDate();
   const { pickedTime } = usePickupTime();
   const { pickedTime1 } = useDropoffTime();
+
+  const [price, setPrice] = useState(0);
+
+  const navigate = useNavigate();
+  const {setCheckoutPrice} = usePrice(); 
+  const {setbikeID} = useBike();
+  
+  function handleClick(){
+    setCheckoutPrice(price) 
+    setbikeID(motorcycle._id)
+    console.log(typeof motorcycle._id)
+    console.log(motorcycle._id)
+    navigate("/Checkout")      
+  }
+
+  useEffect(() => {
+    if (pickedValue && pickedValue1 && pickedTime && pickedTime1) {
+      const time = timeStringToDate(pickedTime);
+      const time1 = timeStringToDate(pickedTime1);
+      const hours =
+        (pickedValue1 - pickedValue) / (1000 * 60 * 60) +
+        (time1 - time) / (1000 * 60 * 60);
+      setPrice(motorcycle.price * hours);
+      console.log(hours);
+    }
+  }, [pickedValue, pickedValue1, pickedTime, pickedTime1, motorcycle.price]);
 
   return (
     <>
@@ -64,24 +109,28 @@ function Card({ motorcycle }) {
         </div>
         <div className="border-b border-gray-400"></div>
         <div className="flex items-center justify-around py-4">
-          <div className="px-8 ">{/* price */}{motorcycle.price}</div>
+          <div className="px-8 ">
+            {/* price */}
+            {price}
+          </div>
           <div className="border-l border-gray-300 h-12"></div>
           <div className="">
             {/* button */}
-            <Link to="/Checkout">
-              <button className="bg-red-600 text-center text-white px-4 py-2 rounded-lg hover:bg-red-800 tracking-wider">
+            
+              <button 
+              onClick={handleClick}
+              className="bg-red-600 text-center text-white px-4 py-2 rounded-lg hover:bg-red-800 tracking-wider">
                 Book Now
               </button>
-            </Link>
           </div>
         </div>
         <div className=" py-1">
           {/* <p className=" text-center text-xs">Excess km charges: ₹/km</p>
           <p className=" text-center text-xs">Refundable security deposit: ₹</p> */}
- <p className="text-center text-lg font-mono">
+          {/* <p className="text-center text-lg font-mono">
               {motorcycle.inStock ? 'In Stock' : 'Out of Stock'}
-            </p> 
-         </div>
+            </p>  */}
+        </div>
       </div>
     </>
   );
@@ -128,4 +177,3 @@ export default Card;
 // }
 
 // export default Card;
-

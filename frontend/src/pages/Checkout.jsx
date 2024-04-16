@@ -2,7 +2,19 @@ import { usePickupDate } from "../Components/PickupDate";
 import { useDropoffDate } from "../Components/DropoffDate";
 import { usePickupTime } from "../Components/PickupTime";
 import { useDropoffTime } from "../Components/DropoffTime";
+import { usePrice } from "../Components/price";
+import PropTypes from "prop-types";
 //import { displayRazorpay } from "../Components/razorpay";
+
+// Card.propTypes = {
+//   motorcycle: PropTypes.shape({
+//     title: PropTypes.string.isRequired,
+//     image: PropTypes.string.isRequired,
+//     model: PropTypes.string.isRequired,
+//     price: PropTypes.number.isRequired,
+//     inStock: PropTypes.bool.isRequired,
+//   }).isRequired,
+// };
 
 function Checkout() {
 
@@ -10,6 +22,8 @@ function Checkout() {
   const { pickedValue1 } = useDropoffDate();
   const { pickedTime } = usePickupTime();
   const { pickedTime1 } = useDropoffTime();
+
+  const {checkoutPrice} = usePrice();
 
   return (
     <>
@@ -66,7 +80,7 @@ function Checkout() {
 
               <div className="flex flex-row justify-between">
                 <div>
-                  <p className="text-4xl ">Total</p>
+                  <p className="text-4xl ">Total: {checkoutPrice}</p>
                 </div>
                 <div>{/* Total price */}</div>
               </div>
