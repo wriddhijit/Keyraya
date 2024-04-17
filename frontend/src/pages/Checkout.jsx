@@ -12,9 +12,7 @@ function Checkout() {
   const { pickedValue } = usePickupDate();
   const { pickedValue1 } = useDropoffDate();
   const { pickedTime } = usePickupTime();
-  const { pickedTime1 } = useDropoffTime();
-
-  
+  const { pickedTime1 } = useDropoffTime();  
 
   const { checkoutPrice } = usePrice();
   const { bikeID } = useBike();
@@ -72,28 +70,28 @@ function Checkout() {
               </div>
               <div className="border-b border-black"></div>
               <div>
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between mt-10">
                   <div>
-                    <p className="text-xl">
+                    <p className="text-2xl font-medium tracking-wider">
                       {" "}
-                      Base Fare:
+                      Base Fare:  <span  className="pl-6 font-medium text-lg"> ₹{checkoutPrice}</span>
                       {/* Time Duration */}{" "}
                     </p>
                   </div>
                   <div>{/* Base price */}</div>
                 </div>
                 <div>
-                  <p> Excess KM Charges: {/* Extra KM */}</p>
+                  <p className=" font-normal"> Excess KM Charges: <span  className=" pl-2 font-medium text-lg"> ₹20/km {/* Extra KM */}</span></p>
                 </div>
               </div>
 
-              <div className="flex flex-row justify-between">
-                <div>
-                  <p className="text-4xl ">Total: {checkoutPrice}</p>
+              <div className="flex flex-row pt-[60px] justify-between">
+                <div className="">
+                  <p className="text-4xl ">Total: </p>
                 </div>
-                <div>{/* Total price */}</div>
+                <div className="text-4xl font-medium tracking-tight">{/* Total price */} ₹{checkoutPrice}</div>
               </div>
-              <div className="flex justify-center mt-">
+              <div className="flex justify-center mt-[50px]">
                 {/* <button
                   <displayRazorpay />
                   className="bg-red-600 w-[600px] text-white text-xl tracking-wider px-4 py-2 rounded-lg hover:bg-red-800"
