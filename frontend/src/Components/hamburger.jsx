@@ -67,18 +67,18 @@ function Hamburger() {
           </div>
         </Link>
         <div className="border-b border-y-zinc-300"></div>
-        <Link to="/Inventorypage">
+        <Link to="/Inventory_">
           <div className="flex items-center  h-[50px] px-[10px] cursor-pointer hover:bg-slate-300 hover:scale-105">
             Inventory
           </div>
         </Link>
         <div className="border-b border-y-zinc-300"></div>
-        <Link to="/">
+        {/* <Link to="/">
           <div className="flex items-center  h-[50px] px-[10px]  cursor-pointer hover:bg-slate-300 hover:scale-105">
             Blogs
           </div>
         </Link>
-        <div className="border-b border-y-zinc-300"></div>
+        <div className="border-b border-y-zinc-300"></div> */}
         <Link to="/About_Us">
           <div className="flex items-center  h-[50px] px-[10px] cursor-pointer  hover:bg-slate-300 hover:scale-105">
             About Us

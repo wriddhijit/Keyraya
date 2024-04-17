@@ -19,12 +19,12 @@ function Navbar() {
           >
             <div className=" ">Home</div>
           </Link>
-          {/* <Link
+          <Link
             className="px-[15px] cursor:pointer flex items-center hover:bg-slate-600 hover:text-white hover:opacity-80 hover:scale-110"
             to="/Inventory_"
           >
             <div className="">Inventory</div>
-          </Link> */}
+          </Link>
           <Link
             className="px-[15px] cursor:pointer flex items-center hover:bg-slate-600 hover:text-white hover:opacity-80 hover:scale-110"
             to="/About_Us"
