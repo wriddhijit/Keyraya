@@ -54,7 +54,7 @@ function Checkout() {
                   <p className=" tracking-wider leading-relaxed text-2xl font-medium">
                     {pickedValue ? pickedValue.toLocaleDateString() : ""}
                   </p>
-                  <p className="text-center text-xl font-mono">{pickedTime}</p>
+                  <p className=" pt-4 text-center text-xl font-mono">{pickedTime}</p>
                 </div>
                 <div className="flex items-center p-2 w-10 h-10 rounded-full border-2 border-gray-200 shadow-lg bg-white">
                   {/* TO */}
@@ -65,10 +65,10 @@ function Checkout() {
                   <p className=" tracking-wider leading-relaxed text-2xl font-medium">
                     {pickedValue1 ? pickedValue1.toLocaleDateString() : ""}
                   </p>
-                  <p className="text-center text-xl font-mono">{pickedTime1}</p>
+                  <p className=" pt-4 text-center text-xl font-mono">{pickedTime1}</p>
                 </div>
               </div>
-              <div className="border-b border-black"></div>
+              <div className="border-b my-6 border-black"></div>
               <div>
                 <div className="flex flex-row justify-between mt-10">
                   <div>
@@ -87,7 +87,7 @@ function Checkout() {
 
               <div className="flex flex-row pt-[60px] justify-between">
                 <div className="">
-                  <p className="text-4xl ">Total: </p>
+                  <p className="text-4xl font-medium">Total: </p>
                 </div>
                 <div className="text-4xl font-medium tracking-tight">{/* Total price */} ₹{checkoutPrice}</div>
               </div>
