@@ -70,7 +70,7 @@ function Card({ motorcycle }) {
   return (
     <>
       <div className="p-3 border-2 border-gray-200 shadow-lg rounded-xl ">
-        <div className="flex justify-center items-center p-4">
+        <div className="flex justify-center items-center p-4 text-2xl font-semibold tracking-wide">
           {motorcycle.title}
         </div>
         <div className=" flex justify-center items-center px-4">
@@ -109,9 +109,9 @@ function Card({ motorcycle }) {
         </div>
         <div className="border-b border-gray-400"></div>
         <div className="flex items-center justify-around py-4">
-          <div className="px-8 ">
+          <div className="px-8 text-[22px] font-semibold tracking-normal ">
             {/* price */}
-            {price}
+            ₹{price}
           </div>
           <div className="border-l border-gray-300 h-12"></div>
           <div className="">

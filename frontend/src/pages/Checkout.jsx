@@ -14,6 +14,8 @@ function Checkout() {
   const { pickedTime } = usePickupTime();
   const { pickedTime1 } = useDropoffTime();
 
+  
+
   const { checkoutPrice } = usePrice();
   const { bikeID } = useBike();
 
